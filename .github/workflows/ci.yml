@@ -12,22 +12,23 @@ jobs:
       # Step 1: Checkout repo
       - uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js
+      # Step 2: Set up Node.js (with caching)
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies from package.json
       - run: npm install
 
       # Step 4: Run HTML lint
-      - run: htmlhint .
+      - run: npx htmlhint .
 
       # Step 5: Run CSS lint
       - run: npx stylelint "**/*.css"
 
       # Step 6: Run JS lint
-      - run: eslint "**/*.js"
+      - run: npx eslint "**/*.js"
 
       # Step 7: W3C HTML validation
       - name: W3C HTML Validation
@@ -40,3 +41,4 @@ jobs:
         run: |
           curl -s "https://jigsaw.w3.org/css-validator/validator?uri=https://www.frankroscoe.com&output=json" \
             | jq '.cssvalidation.errors'
+            
