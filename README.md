@@ -1,4 +1,5 @@
 # Frank Roscoe Portfolio
+[![CI/CD Workflow](https://github.com/frankroscoe/frankroscoe-com/actions/workflows/ci.yml/badge.svg)](https://github.com/frankroscoe/frankroscoe-com/actions/workflows/ci.yml)
 
 This repository hosts the professional IT portfolio site for **Frank Roscoe**.  
 It is designed to present a recruiter‑friendly, polished view of my background, skills, and teaching artifacts.
