@@ -1,7 +1,14 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "indentation": 2,
-    "string-quotes": "double"
+    "color-hex-length": "short",
+    "font-family-name-quotes": "always-unless-keyword",
+    "comment-empty-line-before": "always",
+    "rule-empty-line-before": "always",
+    "no-descending-specificity": null,
+    "length-zero-no-unit": true,
+    "media-feature-range-notation": "prefix"
   }
 }
+
+

@@ -59,6 +59,23 @@ Then visit http://localhost:8000.
 - **GitHub Pages** – hosting and deployment  
 - **MIT License** – open‑source clarity and professionalism
 
+## 🧹 Linting and Workflow Notes
+This project uses [Stylelint](https://stylelint.io/) with the stylelint‑config‑standard ruleset to enforce consistent, accessible CSS.
+
+### Rule Adjustments
+Most rules are kept strict to model best practices. One exception is:
+
+- **Rule name: no‑descending‑specificity**  
+  Disabled in the Stylelint configuration file (.stylelintrc.json) with the setting:  
+  *no‑descending‑specificity set to null*  
+
+  - This rule was repeatedly flagging footer vs. navigation link selectors even when ordered logically.  
+  - For teaching clarity and recruiter readability, selectors are grouped by component (footer styles together, nav styles together) rather than strictly by cascade math.  
+  - Documenting this override shows students how to balance strict linting with practical maintainability.
+
+### JavaScript Notes
+No project JavaScript files exist yet, so ESLint is not configured. ESLint will be added if and when JavaScript is introduced.
+
 ## 🔮 Future Enhancements
 - Adds a Key Achievements page to highlight milestone projects.  
 - Implements CI/CD automation with GitHub Actions for linting, accessibility checks, and build badges.  
