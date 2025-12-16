@@ -17,14 +17,14 @@ jobs:
         with:
           node-version: 20
 
-      # Step 3: Install linters + tools
-      - run: npm install -g htmlhint stylelint eslint jq curl
+      # Step 3: Install dependencies
+      - run: npm install
 
       # Step 4: Run HTML lint
       - run: htmlhint .
 
       # Step 5: Run CSS lint
-      - run: stylelint "**/*.css"
+      - run: npx stylelint "**/*.css"
 
       # Step 6: Run JS lint
       - run: eslint "**/*.js"
